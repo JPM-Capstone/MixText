@@ -8,7 +8,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.utils.data as Data
-from pytorch_transformers import *
+from transformers import *
 from torch.autograd import Variable
 from torch.utils.data import Dataset
 
