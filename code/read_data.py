@@ -41,8 +41,8 @@ def get_data(data_path, n_labeled_per_class, unlabeled_per_class=5000, max_seq_l
     # Load the tokenizer for bert
     tokenizer = BertTokenizer.from_pretrained(model)
 
-    train_df = pd.read_csv(data_path+'train.csv', header=None).iloc[:10000, :]
-    test_df = pd.read_csv(data_path+'test.csv', header=None).iloc[:5000, :]
+    train_df = pd.read_csv(data_path+'train.csv', header=None)
+    test_df = pd.read_csv(data_path+'test.csv', header=None)
 
     # Here we only use the bodies and removed titles to do the classifications
     train_labels = np.array([v-1 for v in train_df[0]])
